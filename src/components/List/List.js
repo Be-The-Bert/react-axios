@@ -4,8 +4,12 @@ import './List.css';
 
 import Customer from './Customer/Customer';
 import CreateCustomer from './CreateCustomer/CreateCustomer';
+import dispatchGetList from './../../services/listService';
 
 class List extends Component {
+  componentDidMount() {
+    dispatchGetList();
+  }
   render() {
     const {
       loading,
